@@ -1,6 +1,6 @@
 # Package telnet
 
-The [`telnet` package](http://godoc.org/github.com/aprice/telnet) provides basic
+The [`telnet` package](http://godoc.org/github.com/matjam/telnet) provides basic
 telnet client and server implementations for Go, including handling of IACs and
 extensible telnet option negotiation.
 
@@ -12,6 +12,7 @@ like to see added!)
 ## Usage
 
 Running a server:
+
 ```go
 svr := telnet.NewServer(":9999", telnet.HandleFunc(func(c *telnet.Connection){
 	log.Printf("Connection received: %s", c.RemoteAddr())
@@ -30,6 +31,7 @@ TCP connection, which aims to transparently handle IAC. There is a slightly
 more complex example located in the `example` package.
 
 Running a client is pretty simple:
+
 ```go
 conn, err := telnet.Dial("127.0.0.1:9999")
 ```
@@ -46,3 +48,8 @@ See the documentation for the options for more details.
 A sub-package, `linereader`, exposes a simple reader intended to be run in a
 Goroutine, which consumes lines from an `io.Reader` and sends them over a
 channel for asynchronous handling.
+
+# Thanks
+
+This package was forked from `github.com/aprice/telnet`. Thanks to aprice for
+the initial implementation.
