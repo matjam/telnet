@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/aprice/telnet"
+	"github.com/matjam/telnet"
 	"golang.org/x/crypto/ssh/terminal"
 )
 

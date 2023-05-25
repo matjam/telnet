@@ -1,6 +1,6 @@
 package options
 
-import "github.com/aprice/telnet"
+import "github.com/matjam/telnet"
 
 // ECHO Telnet Echo Option - https://tools.ietf.org/html/rfc857
 
